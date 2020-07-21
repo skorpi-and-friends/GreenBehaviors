@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var btree := BehaviorNode.new();"
+
+[node name="TestScene" type="Node2D"]
+script = SubResource( 1 )

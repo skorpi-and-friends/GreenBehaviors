@@ -1,0 +1,62 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "LeafSignalNode",
+"class": "Action",
+"language": "GDScript",
+"path": "res://addons/green_behaviors/behavior_nodes/leaf_signal/action.gd"
+}, {
+"base": "Reference",
+"class": "BehaviorNode",
+"language": "GDScript",
+"path": "res://addons/green_behaviors/behavior_nodes/bhtree_node.gd"
+}, {
+"base": "BehaviorNode",
+"class": "CompositeNode",
+"language": "GDScript",
+"path": "res://addons/green_behaviors/behavior_nodes/composite.gd"
+}, {
+"base": "BehaviorNode",
+"class": "LeafSignalNode",
+"language": "GDScript",
+"path": "res://addons/green_behaviors/behavior_nodes/leaf_signal.gd"
+}, {
+"base": "CompositeNode",
+"class": "Selector",
+"language": "GDScript",
+"path": "res://addons/green_behaviors/behavior_nodes/composite/selector.gd"
+}, {
+"base": "VBoxContainer",
+"class": "TreeBoard",
+"language": "GDScript",
+"path": "res://addons/green_behaviors/editor/scripts/tree_editor_root.gd"
+} ]
+_global_script_class_icons={
+"Action": "",
+"BehaviorNode": "",
+"CompositeNode": "",
+"LeafSignalNode": "",
+"Selector": "",
+"TreeBoard": ""
+}
+
+[application]
+
+config/name="GreenBehaviors"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "green_behaviors" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
