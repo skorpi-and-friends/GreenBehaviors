@@ -1,24 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/green_behaviors/editor/scripts/tree_editor_root.gd" type="Script" id=1]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends MenuButton
-
-export var root_path: NodePath; 
-
-onready var _tree := get_node(root_path) as TreeBoard;
-
-func _ready() -> void:
-	assert(_tree);
-	var popup := get_popup();
-	popup.connect(\"index_pressed\", self, \"index_pressed\");
-	
-
-func index_pressed(index: int) -> void:
-	match index:
-		0:
-			_tree.add_node(BehaviorNode.new(\"New node\"));"
+[ext_resource path="res://addons/green_behaviors/editor/scripts/BehaviorTreeEditor.cs" type="Script" id=1]
 
 [node name="RootContainer" type="VBoxContainer"]
 anchor_right = 1.0
@@ -43,8 +25,6 @@ margin_right = 75.0
 margin_bottom = 20.0
 text = "Add Node"
 items = [ "BehaviorNode", null, 0, false, false, -1, 0, null, "", false ]
-script = SubResource( 1 )
-root_path = NodePath("../../..")
 
 [node name="Board" type="GraphEdit" parent="."]
 margin_top = 24.0

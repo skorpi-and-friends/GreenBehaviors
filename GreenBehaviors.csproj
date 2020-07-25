@@ -57,6 +57,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviorScripts.cs" />
+    <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\BehaviorTree.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\composite\CompositeNode.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\composite\Filter.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\composite\Parallel.cs" />
@@ -78,7 +80,13 @@
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\leaf_utility\RollDicePercentage.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\Node.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\NodeState.cs" />
+    <Compile Include="addons\green_behaviors\editor\scripts\BehaviorTreeEditor.cs" />
+    <Compile Include="addons\green_behaviors\editor\scripts\BehaviorTreeInspectorPlugin.cs" />
+    <Compile Include="addons\green_behaviors\editor\scripts\editor_nodes\BaseNode.cs" />
+    <Compile Include="addons\green_behaviors\Plugin.cs" />
+    <Compile Include="ExperimentScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SomeScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

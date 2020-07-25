@@ -1,20 +1,16 @@
 ﻿using System;
-using Object = Godot.Object;
 
-namespace GreenBehaviors
-{
+namespace GreenBehaviors {
     /// <summary>
     ///     A base class for all types of nodes that can exist in a
     ///     Behavior Tree.
     /// </summary>
     [Serializable]
-    public abstract class Node : Object
-    {
+    public abstract class Node : Godot.Object {
         public static InvalidProgramException TickException = new InvalidProgramException(
             "All tick methods should return either SUCCESS, FAILURE or RUNNING");
 
-        protected Node(string name)
-        {
+        protected Node(string name) {
             Name = name;
         }
 
@@ -42,7 +38,6 @@ namespace GreenBehaviors
         ///     Check if the node state is <see cref="NodeState.Success" />
         /// </summary>
         public bool HasSuceeded => State == NodeState.Success;
-
 
         /// <summary>
         ///     Check if the node state is <see cref="NodeState.Failure" />
@@ -77,8 +72,7 @@ namespace GreenBehaviors
         ///     <para>Doesn't call <see cref="Start" /> if the node is already <see cref="NodeState.Running" /></para>
         /// </remarks>
         /// <returns>The state that the node at the end of this method.</returns>
-        public NodeState FullTick()
-        {
+        public NodeState FullTick() {
             if (!IsRunning) Start();
             var status = Tick();
             if (status != NodeState.Running) Finish(status);
@@ -90,8 +84,7 @@ namespace GreenBehaviors
         ///     Start a node. Set's the node in the <see cref="NodeState.Running" /> state and nodes
         ///     that need prepare anything to be <see cref="Tick" />ed start doing so.
         /// </summary>
-        public virtual void Start()
-        {
+        public virtual void Start() {
             State = NodeState.Running;
         }
 
@@ -99,8 +92,7 @@ namespace GreenBehaviors
         ///     Cancels a node. Set's the node in the <see cref="NodeState.Cancelled" /> state and nodes
         ///     that had any machinations running stop these machinations.
         /// </summary>
-        public virtual void Cancel()
-        {
+        public virtual void Cancel() {
             State = NodeState.Cancelled;
         }
 
@@ -108,8 +100,7 @@ namespace GreenBehaviors
         ///     Resets a node. Set's the node in the <see cref="NodeState.Fresh" /> state and nodes
         ///     that have any state that need to be cleaned out for reuse, clean out so.
         /// </summary>
-        public virtual void Reset()
-        {
+        public virtual void Reset() {
             State = NodeState.Fresh;
         }
 
@@ -117,8 +108,7 @@ namespace GreenBehaviors
         ///     Signifies the end of the node's run.
         /// </summary>
         /// <param name="state">The state to set the node in.</param>
-        public virtual void Finish(NodeState state)
-        {
+        public virtual void Finish(NodeState state) {
             State = state;
         }
     }

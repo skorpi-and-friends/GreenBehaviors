@@ -10,42 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
-"class": "BehaviorNode",
+"class": "GreenBehaviors",
 "language": "GDScript",
-"path": "res://addons/green_behaviors/behavior_trees/bhtree_node.gd"
-}, {
-"base": "Resource",
-"class": "BehaviorTree",
-"language": "GDScript",
-"path": "res://addons/green_behaviors/behavior_trees/behavior_tree.gd"
-}, {
-"base": "GraphNode",
-"class": "BehaviorTreeEditorNode",
-"language": "GDScript",
-"path": "res://addons/green_behaviors/editor/scripts/editor_nodes/base.gd"
-}, {
-"base": "EditorInspectorPlugin",
-"class": "BehaviorTreeResourceInspectorPlugin",
-"language": "GDScript",
-"path": "res://addons/green_behaviors/editor/scripts/inspector_plugin.gd"
-}, {
-"base": "BehaviorNode",
-"class": "CompositeNode",
-"language": "GDScript",
-"path": "res://addons/green_behaviors/behavior_trees/composite.gd"
-}, {
-"base": "VBoxContainer",
-"class": "TreeBoard",
-"language": "GDScript",
-"path": "res://addons/green_behaviors/editor/scripts/tree_editor_root.gd"
+"path": "res://addons/green_behaviors/behavior_trees/green_behaviors.gd"
 } ]
 _global_script_class_icons={
-"BehaviorNode": "",
-"BehaviorTree": "",
-"BehaviorTreeEditorNode": "",
-"BehaviorTreeResourceInspectorPlugin": "",
-"CompositeNode": "",
-"TreeBoard": ""
+"GreenBehaviors": ""
 }
 
 [application]
