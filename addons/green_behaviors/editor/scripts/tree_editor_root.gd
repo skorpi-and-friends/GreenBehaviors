@@ -11,5 +11,7 @@ func add_node(node: BehaviorNode):
 	if node is BehaviorNode:
 		scene = load(
 		"res://addons/green_behaviors/editor/scenes/nodes/BehaviorNode.tscn") as PackedScene;
-	_board.add_child(scene.instance())
+	var graph_node := scene.instance() as BehaviorTreeEditorNode;
+	graph_node._set_behavior(node)
+	_board.add_child(graph_node);
 	

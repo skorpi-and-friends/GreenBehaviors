@@ -1,9 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/green_behaviors/editor/scripts/tree_editor_root.gd" type="Script" id=1]
-[ext_resource path="res://addons/green_behaviors/editor/scenes/nodes/BehaviorNode.tscn" type="PackedScene" id=2]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 script/source = "extends MenuButton
 
 export var root_path: NodePath; 
@@ -27,6 +26,9 @@ anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ToolBar" type="HBoxContainer" parent="."]
 margin_right = 1024.0
@@ -41,7 +43,7 @@ margin_right = 75.0
 margin_bottom = 20.0
 text = "Add Node"
 items = [ "BehaviorNode", null, 0, false, false, -1, 0, null, "", false ]
-script = SubResource( 2 )
+script = SubResource( 1 )
 root_path = NodePath("../../..")
 
 [node name="Board" type="GraphEdit" parent="."]
@@ -53,9 +55,3 @@ size_flags_vertical = 3
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="BaseNode" parent="Board" instance=ExtResource( 2 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 273.0
-margin_bottom = 213.0

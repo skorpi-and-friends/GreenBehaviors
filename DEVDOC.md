@@ -1,9 +1,8 @@
-# ISIS - GODOT
+# GreenBehaviors - GODOT
 
 ## To-do
 
 - [ ] tree editor
-
 
 ## design-doc
 

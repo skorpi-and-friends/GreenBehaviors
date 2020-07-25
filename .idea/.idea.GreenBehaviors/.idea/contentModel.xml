@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\cosmicbridgeman\.Rider2019.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\cosmicbridgeman\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\cosmicbridgeman\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_GreenBehaviors.-2009875337.00" t="ExcludeRecursive" />
+    <e p="C:\Users\cosmicbridgeman\godot\GreenBehaviors" t="IncludeRecursive">
+      <e p=".mono\temp\bin" t="ExcludeRecursive" />
+      <e p=".mono\temp\obj" t="ExcludeRecursive" />
+      <e p="addons" t="Include">
+        <e p="green_behaviors" t="Include">
+          <e p="behavior_trees" t="Include">
+            <e p="GreenBehaviors" t="Include">
+              <e p="composite" t="Include">
+                <e p="CompositeNode.cs" t="Include" />
+                <e p="Filter.cs" t="Include" />
+                <e p="Parallel.cs" t="Include" />
+                <e p="PrioritizedSelector.cs" t="Include" />
+                <e p="Selector.cs" t="Include" />
+                <e p="Sequence.cs" t="Include" />
+              </e>
+              <e p="decorator" t="Include">
+                <e p="Checker.cs" t="Include" />
+                <e p="DecoratorNode.cs" t="Include" />
+                <e p="Inverter.cs" t="Include" />
+                <e p="Monitored.cs" t="Include" />
+                <e p="Repeater.cs" t="Include" />
+                <e p="SimpleInclude.cs" t="Include" />
+              </e>
+              <e p="leaf_funcref" t="Include">
+                <e p="Action.cs" t="Include" />
+                <e p="Conditional.cs" t="Include" />
+                <e p="FuncRefLeafNode.cs" t="Include" />
+              </e>
+              <e p="leaf_lambda" t="Include">
+                <e p="Action.cs" t="Include" />
+                <e p="Conditional.cs" t="Include" />
+                <e p="LambdaLeafNode.cs" t="Include" />
+              </e>
+              <e p="leaf_utility" t="Include">
+                <e p="RollDicePercentage.cs" t="Include" />
+              </e>
+              <e p="Node.cs" t="Include" />
+              <e p="NodeState.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GreenBehaviors.csproj" t="IncludeRecursive" />
+      <e p="GreenBehaviors.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
