@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/green_behaviors/editor/scripts/editor_nodes/BaseNode.cs" type="Script" id=1]
+[ext_resource path="res://addons/green_behaviors/editor/scripts/editor_nodes/BehaviorNodeEditorGraphNode.cs" type="Script" id=1]
 
 [node name="BaseNode" type="GraphNode"]
 mouse_filter = 1
@@ -8,7 +8,7 @@ title = "BehaviorNode"
 slot/0/left_enabled = true
 slot/0/left_type = 0
 slot/0/left_color = Color( 1, 1, 1, 1 )
-slot/0/right_enabled = true
+slot/0/right_enabled = false
 slot/0/right_type = 0
 slot/0/right_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 1 )

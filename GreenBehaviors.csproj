@@ -80,9 +80,10 @@
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\leaf_utility\RollDicePercentage.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\Node.cs" />
     <Compile Include="addons\green_behaviors\behavior_trees\GreenBehaviors\NodeState.cs" />
+    <Compile Include="addons\green_behaviors\editor\scripts\AddNodeMenu.cs" />
     <Compile Include="addons\green_behaviors\editor\scripts\BehaviorTreeEditor.cs" />
     <Compile Include="addons\green_behaviors\editor\scripts\BehaviorTreeInspectorPlugin.cs" />
-    <Compile Include="addons\green_behaviors\editor\scripts\editor_nodes\BaseNode.cs" />
+    <Compile Include="addons\green_behaviors\editor\scripts\editor_nodes\BehaviorNodeEditorGraphNode.cs" />
     <Compile Include="addons\green_behaviors\Plugin.cs" />
     <Compile Include="ExperimentScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

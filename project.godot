@@ -24,10 +24,6 @@ config/name="GreenBehaviors"
 run/main_scene="res://addons/green_behaviors/editor/scenes/main_screen_editor.tscn"
 config/icon="res://icon.png"
 
-[editor_plugins]
-
-enabled=PoolStringArray( "green_behaviors" )
-
 [rendering]
 
 environment/default_environment="res://default_env.tres"
