@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7673DEF4-184F-495B-BE20-5B8B70A058B7}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
+    <OutputPath>..\..\.mono\temp\bin\$(Configuration)</OutputPath>
     <RootNamespace>GreenBehaviors</RootNamespace>
     <AssemblyName>GreenBehaviors</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <GodotProjectGeneratorVersion>1.0.0.0</GodotProjectGeneratorVersion>
-    <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\.mono\temp\obj</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
     <ApiConfiguration Condition=" '$(Configuration)' != 'ExportRelease' ">Debug</ApiConfiguration>
     <ApiConfiguration Condition=" '$(Configuration)' == 'ExportRelease' ">Release</ApiConfiguration>
@@ -48,39 +48,39 @@
     </PackageReference>
     <Reference Include="GodotSharp">
       <Private>False</Private>
-      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharp.dll</HintPath>
+      <HintPath>$(ProjectDir)/../../.mono/assemblies/$(ApiConfiguration)/GodotSharp.dll</HintPath>
     </Reference>
     <Reference Include="GodotSharpEditor" Condition=" '$(Configuration)' == 'Debug' ">
       <Private>False</Private>
-      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharpEditor.dll</HintPath>
+      <HintPath>$(ProjectDir)/../../.mono/assemblies/$(ApiConfiguration)/GodotSharpEditor.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\BehaviorTree.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\composite\CompositeNode.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\composite\Filter.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\composite\Parallel.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\composite\PrioritizedSelector.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\composite\Selector.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\composite\Sequence.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\decorator\Checker.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\decorator\DecoratorNode.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\decorator\Inverter.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\decorator\Monitored.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\decorator\Repeater.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\decorator\SimpleInclude.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_funcref\Action.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_funcref\Conditional.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_funcref\FuncRefLeafNode.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_lambda\Action.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_lambda\Conditional.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_lambda\LambdaLeafNode.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\leaf_utility\RollDicePercentage.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\Node.cs" />
-    <Compile Include="addons\GreenBehaviors\GreenBehaviors\NodeState.cs" />
-    <Compile Include="addons\GreenBehaviors\Plugin.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GreenBehaviors\BehaviorTree.cs" />
+    <Compile Include="GreenBehaviors\composite\CompositeNode.cs" />
+    <Compile Include="GreenBehaviors\composite\Filter.cs" />
+    <Compile Include="GreenBehaviors\composite\Parallel.cs" />
+    <Compile Include="GreenBehaviors\composite\PrioritizedSelector.cs" />
+    <Compile Include="GreenBehaviors\composite\Selector.cs" />
+    <Compile Include="GreenBehaviors\composite\Sequence.cs" />
+    <Compile Include="GreenBehaviors\decorator\Checker.cs" />
+    <Compile Include="GreenBehaviors\decorator\DecoratorNode.cs" />
+    <Compile Include="GreenBehaviors\decorator\Inverter.cs" />
+    <Compile Include="GreenBehaviors\decorator\Monitored.cs" />
+    <Compile Include="GreenBehaviors\decorator\Repeater.cs" />
+    <Compile Include="GreenBehaviors\decorator\SimpleInclude.cs" />
+    <Compile Include="GreenBehaviors\leaf_funcref\Action.cs" />
+    <Compile Include="GreenBehaviors\leaf_funcref\Conditional.cs" />
+    <Compile Include="GreenBehaviors\leaf_funcref\FuncRefLeafNode.cs" />
+    <Compile Include="GreenBehaviors\leaf_lambda\Action.cs" />
+    <Compile Include="GreenBehaviors\leaf_lambda\Conditional.cs" />
+    <Compile Include="GreenBehaviors\leaf_lambda\LambdaLeafNode.cs" />
+    <Compile Include="GreenBehaviors\leaf_utility\RollDicePercentage.cs" />
+    <Compile Include="GreenBehaviors\Node.cs" />
+    <Compile Include="GreenBehaviors\NodeState.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\GreenBehaviorsAssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
