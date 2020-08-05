@@ -1,3 +1,3 @@
 # GreenBehaviors
 
-Behavior trees for godot.
+Behavior trees for godot (C#).

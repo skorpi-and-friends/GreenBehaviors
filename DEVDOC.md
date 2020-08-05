@@ -2,14 +2,23 @@
 
 ## To-do
 
-- [ ] tree editor
+- [ ] Tree Editor
+- [ ] Behavior Tree Builder
+- [x] Differenciate b/t update & tick
+  - I've gone with TickFull. LAS.
+- [x] Counter On Repeater
+- [x] Composite; Set _runningNode in Start
+- [x] Parallels & Monitors
+- [x] Active Selectors / Dynamic Guards
+  - Named Prioritized Selectors
+- [x] Filters
 
 ## design-doc
 
 ### Features
 
 - [ ] Tree Editor
-- [ ] C# btree
+- [x] C# btree
 
 ## dev-log
 

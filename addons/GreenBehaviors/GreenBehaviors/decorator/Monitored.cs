@@ -72,13 +72,19 @@ namespace GreenBehaviors.Decorator
 
         public override NodeState Tick()
         {
-            var guardState = TickGuard();
-            return guardState == NodeState.Success ? TickChild() : guardState;
+            var guardState = _guardNode.FullTick();
+            switch (guardState)
+            {
+                case NodeState.Success:
+                    return _childNode.FullTick();
+                case NodeState.Failure:
+                    _childNode.Cancel();
+                    return NodeState.Failure;
+                default:
+                    return guardState;
+
+            }
         }
-
-        public NodeState TickChild() => _childNode.FullTick();
-
-        public NodeState TickGuard() => _guardNode.FullTick();
 
         public override void Cancel()
         {
@@ -97,6 +103,7 @@ namespace GreenBehaviors.Decorator
         public override void Finish(NodeState state)
         {
             // TODO should we paremeterize child node cancelling?
+            if (_guardNode.IsRunning) _guardNode.Cancel();
             if (_childNode.IsRunning) _childNode.Cancel();
             base.Finish(state);
         }
