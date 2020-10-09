@@ -123,20 +123,24 @@ namespace GreenBehaviors.Composite
 		public override void Finish(NodeState state)
 		{
 			foreach (var node in _childrenNodes)
-				if (node.IsRunning)
+            {
+                if (node.IsRunning)
 					node.Cancel();
+            }
 
-			_runningChildrenNodes = new LinkedList<Node>();
+            _runningChildrenNodes = new LinkedList<Node>();
 			base.Finish(state);
 		}
 
 		public override void Cancel()
 		{
 			foreach (var node in _childrenNodes)
-				if (node.IsRunning)
+            {
+                if (node.IsRunning)
 					node.Cancel();
+            }
 
-			_runningChildrenNodes = new LinkedList<Node>();
+            _runningChildrenNodes = new LinkedList<Node>();
 			_runningNode = null;
 			base.Cancel();
 		}

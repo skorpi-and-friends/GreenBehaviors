@@ -85,7 +85,7 @@ namespace GreenBehaviors
 		}
 
 		/// <summary>
-		///     Start a node. Set's the node in the <see cref="NodeState.Running" /> state and nodes
+		///     Starts a node i.e. readies it to be ticked. Set's the node in the <see cref="NodeState.Running" /> state and nodes
 		///     that need prepare anything to be <see cref="Tick" />ed start doing so.
 		/// </summary>
 		public virtual void Start()

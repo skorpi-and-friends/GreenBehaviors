@@ -1,25 +1,22 @@
 ﻿using System;
 
-namespace GreenBehaviors.LeafLambda
-{
+namespace GreenBehaviors.LeafLambda {
     /// <summary>
     ///     A simple class that allows easy definition of a leaf node through delegates.
     /// </summary>
-    public class Action : LambdaLeafNode
-    {
+    public class Action : LambdaLeafNode {
         private readonly Func<Action, NodeState> _tickDelegate;
 
         public Action(
-            string name,
-            Func<Action, NodeState> tickDelegate,
-            Action<LambdaLeafNode> startDelegate = null,
-            Action<LambdaLeafNode, NodeState> finishDelegate = null,
-            Action<LambdaLeafNode> cancelDelegate = null,
-            Action<LambdaLeafNode> resetDelegate = null) :
-            base(name, startDelegate, finishDelegate, cancelDelegate, resetDelegate)
-        {
-            _tickDelegate = tickDelegate;
-        }
+                string name,
+                Func<Action, NodeState> tick,
+                Action<LambdaLeafNode> start = null,
+                Action<LambdaLeafNode, NodeState> finish = null,
+                Action<LambdaLeafNode> cancel = null,
+                Action<LambdaLeafNode> reset = null):
+            base(name, start, finish, cancel, reset) {
+                _tickDelegate = tick;
+            }
 
         public override NodeState Tick() => _tickDelegate(this);
     }

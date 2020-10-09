@@ -12,7 +12,7 @@ namespace GreenBehaviors.Decorator
     {
         protected Node _childNode;
 
-        public DecoratorNode(string name, Node childNode = null) : base(name)
+        protected DecoratorNode(string name, Node childNode = null) : base(name)
         {
             _childNode = childNode != null ? childNode : LambdaLeafNode.EmptySuccessNode;
         }

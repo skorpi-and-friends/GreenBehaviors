@@ -1,4 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<Project Sdk="Godot.NET.Sdk/3.2.3">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>      
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Assembly info is used only if on old .csproj format so exlude it -->
+    <Compile Include="**/*.cs" Exclude="Properties/**" /> 
+  </ItemGroup>
+</Project>
+
+
+<!-- if you're on the old `.csproj` format. -->
+<!-- 
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -57,30 +71,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GreenBehaviors\BehaviorTree.cs" />
-    <Compile Include="GreenBehaviors\composite\CompositeNode.cs" />
-    <Compile Include="GreenBehaviors\composite\Filter.cs" />
-    <Compile Include="GreenBehaviors\composite\Parallel.cs" />
-    <Compile Include="GreenBehaviors\composite\PrioritizedSelector.cs" />
-    <Compile Include="GreenBehaviors\composite\Selector.cs" />
-    <Compile Include="GreenBehaviors\composite\Sequence.cs" />
-    <Compile Include="GreenBehaviors\decorator\Checker.cs" />
-    <Compile Include="GreenBehaviors\decorator\DecoratorNode.cs" />
-    <Compile Include="GreenBehaviors\decorator\Inverter.cs" />
-    <Compile Include="GreenBehaviors\decorator\Monitored.cs" />
-    <Compile Include="GreenBehaviors\decorator\Repeater.cs" />
-    <Compile Include="GreenBehaviors\decorator\SimpleInclude.cs" />
-    <Compile Include="GreenBehaviors\leaf_funcref\Action.cs" />
-    <Compile Include="GreenBehaviors\leaf_funcref\Conditional.cs" />
-    <Compile Include="GreenBehaviors\leaf_funcref\FuncRefLeafNode.cs" />
-    <Compile Include="GreenBehaviors\leaf_lambda\Action.cs" />
-    <Compile Include="GreenBehaviors\leaf_lambda\Conditional.cs" />
-    <Compile Include="GreenBehaviors\leaf_lambda\LambdaLeafNode.cs" />
-    <Compile Include="GreenBehaviors\leaf_utility\RollDicePercentage.cs" />
-    <Compile Include="GreenBehaviors\Node.cs" />
-    <Compile Include="GreenBehaviors\NodeState.cs" />
-    <Compile Include="Plugin.cs" />
-    <Compile Include="Properties\GreenBehaviorsAssemblyInfo.cs" />
+    <Compile Include="**/*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-</Project>
+</Project> -->

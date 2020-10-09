@@ -17,20 +17,22 @@ namespace GreenBehaviors.Composite
 		public override NodeState Tick()
 		{
 			while (_runningNode != null)
-				switch (_runningNode.Value.FullTick())
-				{
-					case NodeState.Success:
-						return NodeState.Success;
-					case NodeState.Running:
-						return NodeState.Running;
-					case NodeState.Failure:
-						_runningNode = _runningNode.Next;
-						break;
-					default:
-						throw TickException;
-				}
+            {
+                switch (_runningNode.Value.FullTick())
+                {
+                    case NodeState.Success:
+                        return NodeState.Success;
+                    case NodeState.Running:
+                        return NodeState.Running;
+                    case NodeState.Failure:
+                        _runningNode = _runningNode.Next;
+                        break;
+                    default:
+                        throw TickException;
+                }
+            }
 
-			return NodeState.Failure;
-		}
-	}
+            return NodeState.Failure;
+        }
+    }
 }

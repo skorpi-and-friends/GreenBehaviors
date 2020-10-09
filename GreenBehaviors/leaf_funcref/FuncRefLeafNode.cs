@@ -33,13 +33,12 @@ namespace GreenBehaviors.LeafFuncRef
             GD.FuncRef(emptyNodeInstance, "Succeed")
         );
 
-
         private readonly FuncRef _startDelegate;
         private readonly FuncRef _finishDelegate;
         private readonly FuncRef _cancelDelegate;
         private readonly FuncRef _resetDelegate;
 
-        public FuncRefLeafNode(
+        protected FuncRefLeafNode(
             string name,
             FuncRef startDelegate = null,
             FuncRef finishDelegate = null,

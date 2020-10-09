@@ -35,7 +35,7 @@ namespace GreenBehaviors.LeafLambda {
         private readonly Action<LambdaLeafNode> _cancelDelegate;
         private readonly Action<LambdaLeafNode> _resetDelegate;
 
-        public LambdaLeafNode(
+        protected LambdaLeafNode(
                 string name,
                 Action<LambdaLeafNode> startDelegate = null,
                 Action<LambdaLeafNode, NodeState> finishDelegate = null,
